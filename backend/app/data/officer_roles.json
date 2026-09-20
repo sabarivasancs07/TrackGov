@@ -1,0 +1,35 @@
+[
+    {
+        "officer_id": "OFF-001",
+        "name": "Rajesh Kumar",
+        "username": "officer001",
+        "password": "password123",
+        "role": "Verification Officer",
+        "department": "Revenue Department",
+        "email": "rajesh@example.com",
+        "phone_number": "9876500001",
+        "is_active": true
+    },
+    {
+        "officer_id": "OFF-002",
+        "name": "Priya Menon",
+        "username": "officer002",
+        "password": "password123",
+        "role": "Field Verification Officer",
+        "department": "Revenue Department",
+        "email": "priya@example.com",
+        "phone_number": "9876500002",
+        "is_active": true
+    },
+    {
+        "officer_id": "OFF-003",
+        "name": "Suresh Kumar",
+        "username": "officer003",
+        "password": "password123",
+        "role": "Approving Officer",
+        "department": "Revenue Department",
+        "email": "suresh@example.com",
+        "phone_number": "9876500003",
+        "is_active": true
+    }
+] 

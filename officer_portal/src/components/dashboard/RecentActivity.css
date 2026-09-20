@@ -1,0 +1,74 @@
+.recent-activity-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-feed {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  overflow-y: auto;
+  padding-right: var(--spacing-2);
+}
+
+.activity-item {
+  display: flex;
+  gap: var(--spacing-3);
+  position: relative;
+}
+
+.activity-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 24px;
+  bottom: -16px;
+  width: 2px;
+  background-color: var(--neutral-200);
+}
+
+.activity-icon-wrapper {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  background-color: white;
+  border: 2px solid var(--neutral-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.text-status-approved { color: var(--status-approved-text); }
+.text-status-rejected { color: var(--status-rejected-text); }
+.text-status-pending { color: var(--status-pending-text); }
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2px;
+}
+
+.activity-title {
+  font-size: 0.875rem;
+  color: var(--neutral-700);
+}
+
+.activity-time {
+  font-size: 0.75rem;
+  color: var(--neutral-400);
+  white-space: nowrap;
+  margin-left: var(--spacing-2);
+}
+
+.activity-desc {
+  font-size: 0.8125rem;
+  color: var(--neutral-500);
+  margin: 0;
+}

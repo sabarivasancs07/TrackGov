@@ -1,0 +1,9 @@
+.workflow-timeline {
+  height: 100%;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: var(--spacing-2);
+}

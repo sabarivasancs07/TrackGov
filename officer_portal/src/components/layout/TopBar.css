@@ -1,0 +1,147 @@
+.topbar {
+  height: var(--topbar-height);
+  background-color: white;
+  border-bottom: 1px solid var(--neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-6);
+  z-index: 30;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  flex: 1;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  color: var(--neutral-600);
+  transition: background-color 0.2s;
+}
+
+.icon-btn:hover {
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-md);
+  padding: 0 var(--spacing-3);
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.search-container:focus-within {
+  background-color: white;
+  border-color: var(--primary-300);
+  box-shadow: 0 0 0 2px var(--primary-100);
+}
+
+.search-icon {
+  color: var(--neutral-500);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  padding: var(--spacing-2) var(--spacing-3);
+  width: 100%;
+  outline: none;
+  font-size: 0.875rem;
+}
+
+.search-input::placeholder {
+  color: var(--neutral-400);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.notification-btn {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  background-color: var(--status-rejected-text);
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.officer-profile {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  cursor: pointer;
+  padding: var(--spacing-1);
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s;
+}
+
+.officer-profile:hover {
+  background-color: var(--neutral-100);
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+}
+
+.officer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.officer-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-900);
+  line-height: 1.2;
+}
+
+.officer-designation {
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 var(--spacing-4);
+  }
+  
+  .search-container {
+    display: none; /* Hide on mobile for simplicity, could show icon */
+  }
+  
+  .officer-info {
+    display: none;
+  }
+}

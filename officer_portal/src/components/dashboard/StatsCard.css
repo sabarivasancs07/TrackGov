@@ -1,0 +1,85 @@
+.stats-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-4);
+}
+
+.stats-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Color Variants */
+.stats-primary .stats-icon-wrapper {
+  background-color: var(--primary-100);
+  color: var(--primary-600);
+}
+
+.stats-pending .stats-icon-wrapper {
+  background-color: var(--status-pending-bg);
+  color: var(--status-pending-text);
+}
+
+.stats-success .stats-icon-wrapper {
+  background-color: var(--status-approved-bg);
+  color: var(--status-approved-text);
+}
+
+.stats-danger .stats-icon-wrapper {
+  background-color: var(--status-delayed-bg);
+  color: var(--status-delayed-text);
+}
+
+.stats-trend {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: var(--radius-full);
+}
+
+.stats-trend.up {
+  color: var(--status-approved-text);
+  background-color: var(--status-approved-bg);
+}
+
+.stats-trend.down {
+  color: var(--status-rejected-text);
+  background-color: var(--status-rejected-bg);
+}
+
+.stats-trend.neutral {
+  color: var(--neutral-600);
+  background-color: var(--neutral-100);
+}
+
+.stats-body {
+  margin-top: auto;
+}
+
+.stats-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--neutral-900);
+}
+
+.stats-title {
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  margin: 0;
+}

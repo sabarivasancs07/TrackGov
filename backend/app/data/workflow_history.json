@@ -1,0 +1,60 @@
+[
+    {
+        "application_id": "INC-2026-001",
+        "stages": [
+            {
+                "stage_id": "STAGE-001",
+                "stage_name": "Application Submitted",
+                "stage_order": 1,
+                "status": "Completed",
+                "assigned_to": null,
+                "started_at": "2026-08-10T09:15:00",
+                "completed_at": "2026-08-10T09:15:00",
+                "remarks": "Application submitted successfully."
+            },
+            {
+                "stage_id": "STAGE-002",
+                "stage_name": "Document Verification",
+                "stage_order": 2,
+                "status": "Completed",
+                "assigned_to": "OFF-001",
+                "started_at": "2026-08-12T11:00:00",
+                "completed_at": "2026-08-31T12:18:39.406700",
+                "remarks": "Documents verified successfully."
+            },
+            {
+                "stage_id": "STAGE-003",
+                "stage_name": "Officer Verification",
+                "stage_order": 3,
+                "status": "In Progress",
+                "assigned_to": null,
+                "started_at": "2026-08-31T12:18:25.983248",
+                "completed_at": null,
+                "remarks": null
+            },
+            {
+                "stage_id": "STAGE-004",
+                "stage_name": "Field Verification",
+                "stage_order": 4,
+                "status": "In Progress",
+                "assigned_to": null,
+                "started_at": "2026-08-31T12:18:39.407699",
+                "completed_at": null,
+                "remarks": null
+            },
+            {
+                "stage_id": "STAGE-005",
+                "stage_name": "Final Approval",
+                "stage_order": 5,
+                "status": "Pending",
+                "assigned_to": null,
+                "started_at": null,
+                "completed_at": null,
+                "remarks": null
+            }
+        ],
+        "current_stage": "Field Verification",
+        "overall_status": "Under Verification",
+        "last_updated": "2026-08-31T12:18:39.407699"
+    }
+]

@@ -1,0 +1,60 @@
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  border: 1px solid transparent;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.status-badge-sm {
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.status-badge-md {
+  padding: 4px 10px;
+  font-size: 0.8125rem;
+  border-radius: var(--radius-full);
+}
+
+.status-icon {
+  flex-shrink: 0;
+}
+
+.badge-pending {
+  color: var(--status-pending-text);
+  background-color: var(--status-pending-bg);
+  border-color: var(--status-pending-border);
+}
+
+.badge-progress {
+  color: var(--status-progress-text);
+  background-color: var(--status-progress-bg);
+  border-color: var(--status-progress-border);
+}
+
+.badge-approved {
+  color: var(--status-approved-text);
+  background-color: var(--status-approved-bg);
+  border-color: var(--status-approved-border);
+}
+
+.badge-rejected {
+  color: var(--status-rejected-text);
+  background-color: var(--status-rejected-bg);
+  border-color: var(--status-rejected-border);
+}
+
+.badge-delayed {
+  color: var(--status-delayed-text);
+  background-color: var(--status-delayed-bg);
+  border-color: var(--status-delayed-border);
+}
+
+.badge-default {
+  color: var(--neutral-600);
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-200);
+}

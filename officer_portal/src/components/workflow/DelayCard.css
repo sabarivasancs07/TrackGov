@@ -1,0 +1,30 @@
+.delay-card {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.delay-card-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.delay-card-title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.delay-card-title-delayed {
+  color: var(--danger-color);
+}
+
+.delay-card-title-ontime {
+  color: var(--success-color);
+}
+
+.delay-card-subtitle {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

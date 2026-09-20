@@ -1,0 +1,22 @@
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background-color: var(--neutral-100);
+}
+
+.priority-high {
+  color: var(--status-rejected-text);
+}
+
+.priority-medium {
+  color: var(--status-pending-text);
+}
+
+.priority-low {
+  color: var(--status-approved-text);
+}

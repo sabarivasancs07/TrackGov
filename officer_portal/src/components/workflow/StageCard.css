@@ -1,0 +1,97 @@
+.stage-card {
+  display: flex;
+  gap: var(--spacing-4);
+  position: relative;
+  min-height: 80px;
+}
+
+.stage-indicator-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+}
+
+.stage-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  z-index: 2;
+}
+
+.stage-icon.completed { color: var(--status-approved-text); }
+.stage-icon.pending { color: var(--neutral-400); }
+.stage-icon.rejected { color: var(--status-rejected-text); }
+
+.stage-icon .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: var(--neutral-300);
+}
+
+.stage-line {
+  width: 2px;
+  flex: 1;
+  background-color: var(--neutral-200);
+  margin: var(--spacing-1) 0;
+}
+
+.stage-line.completed {
+  background-color: var(--status-approved-text);
+}
+
+.stage-content {
+  flex: 1;
+  padding-bottom: var(--spacing-6);
+}
+
+.stage-card.last .stage-content {
+  padding-bottom: 0;
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-1);
+}
+
+.stage-title {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--neutral-800);
+}
+
+.active-stage .stage-title {
+  color: var(--primary-600);
+  font-weight: 700;
+}
+
+.stage-date {
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+}
+
+.stage-officer {
+  margin-bottom: var(--spacing-2);
+}
+
+.stage-remarks {
+  background-color: var(--neutral-50);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--neutral-700);
+  border-left: 3px solid var(--neutral-300);
+}
+
+.rejected-remarks {
+  background-color: var(--status-rejected-bg);
+  color: var(--status-rejected-text);
+  border-left-color: var(--status-rejected-text);
+}

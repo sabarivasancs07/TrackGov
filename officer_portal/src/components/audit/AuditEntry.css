@@ -1,0 +1,129 @@
+.audit-entry {
+  padding: var(--spacing-4);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-md);
+  background-color: white;
+  transition: box-shadow 0.2s;
+}
+
+.audit-entry:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.audit-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.audit-actor, .audit-time {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.actor-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--neutral-800);
+}
+
+.time-text {
+  font-size: 0.75rem;
+  color: var(--neutral-500);
+}
+
+.audit-entry-body {
+  margin-bottom: var(--spacing-2);
+  font-size: 0.9375rem;
+}
+
+.audit-action {
+  font-weight: 500;
+  color: var(--primary-600);
+  margin-right: var(--spacing-1);
+}
+
+.audit-target {
+  color: var(--neutral-700);
+}
+
+.audit-entry-footer {
+  margin-top: var(--spacing-3);
+  padding-top: var(--spacing-3);
+  border-top: 1px dashed var(--neutral-200);
+}
+
+.audit-remarks {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  font-style: italic;
+}
+
+.audit-entry-wrapper {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.audit-entry-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.audit-actor-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.audit-actor-role {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.audit-office-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.audit-time-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.audit-body-container {
+  margin-bottom: 0.5rem;
+}
+
+.audit-action-text {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.audit-target-text {
+  margin-left: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.audit-footer-container {
+  background-color: var(--bg-color);
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.audit-remarks-text {
+  margin: 0;
+}

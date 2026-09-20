@@ -1,0 +1,46 @@
+.app-detail-page {
+  padding-bottom: var(--spacing-10);
+}
+
+.back-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid var(--neutral-200);
+  color: var(--neutral-600);
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+}
+
+.app-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+  margin-top: var(--spacing-6);
+}
+
+@media (min-width: 1024px) {
+  .app-detail-grid {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.app-detail-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.app-detail-sidebar {
+  position: sticky;
+  top: calc(var(--topbar-height) + var(--spacing-6));
+}

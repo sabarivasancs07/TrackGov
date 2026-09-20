@@ -1,0 +1,56 @@
+[
+    {
+        "log_id": "LOG-001",
+        "application_id": "INC-2026-001",
+        "action": "APPLICATION_SUBMITTED",
+        "performed_by": "CITIZEN",
+        "performed_by_role": "Citizen",
+        "description": "Income Certificate application was submitted successfully.",
+        "timestamp": "2026-08-10T09:15:00"
+    },
+    {
+        "log_id": "LOG-002",
+        "application_id": "INC-2026-001",
+        "action": "OFFICER_ASSIGNED",
+        "performed_by": "OFF-001",
+        "performed_by_role": "Verification Officer",
+        "description": "Application was assigned to the verification officer.",
+        "timestamp": "2026-08-11T10:30:00"
+    },
+    {
+        "log_id": "LOG-003",
+        "application_id": "INC-2026-001",
+        "action": "DOCUMENT_VERIFICATION_STARTED",
+        "performed_by": "OFF-001",
+        "performed_by_role": "Verification Officer",
+        "description": "Document verification process started.",
+        "timestamp": "2026-08-12T11:00:00"
+    },
+    {
+        "log_id": "LOG-004",
+        "application_id": "INC-2026-002",
+        "action": "APPLICATION_SUBMITTED",
+        "performed_by": "CITIZEN",
+        "performed_by_role": "Citizen",
+        "description": "Income Certificate application was submitted successfully.",
+        "timestamp": "2026-08-16T14:20:00"
+    },
+    {
+        "log_id": "LOG-005",
+        "application_id": "INC-2026-003",
+        "action": "FIELD_VERIFICATION_STARTED",
+        "performed_by": "OFF-002",
+        "performed_by_role": "Field Verification Officer",
+        "description": "Field verification process started.",
+        "timestamp": "2026-08-05T09:45:00"
+    },
+    {
+        "log_id": "LOG-006",
+        "application_id": "INC-2026-004",
+        "action": "APPLICATION_APPROVED",
+        "performed_by": "OFF-003",
+        "performed_by_role": "Approving Officer",
+        "description": "Income Certificate application was approved.",
+        "timestamp": "2026-08-15T16:10:00"
+    }
+]

@@ -1,0 +1,75 @@
+.heatmap-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heatmap-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  flex: 1;
+}
+
+.heatmap-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.heatmap-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.875rem;
+}
+
+.heatmap-bar-container {
+  height: 12px;
+  background-color: var(--neutral-100);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  width: 100%;
+}
+
+.heatmap-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s ease-out;
+}
+
+.heatmap-bar.low {
+  background-color: var(--status-approved-text);
+}
+
+.heatmap-bar.medium {
+  background-color: var(--status-pending-text);
+}
+
+.heatmap-bar.high {
+  background-color: var(--status-rejected-text);
+}
+
+.heatmap-legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  border-top: 1px dashed var(--neutral-200);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-color.low { background-color: var(--status-approved-text); }
+.legend-color.medium { background-color: var(--status-pending-text); }
+.legend-color.high { background-color: var(--status-rejected-text); }

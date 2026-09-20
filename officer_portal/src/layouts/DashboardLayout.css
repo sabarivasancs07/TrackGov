@@ -1,0 +1,31 @@
+.dashboard-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--neutral-50);
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  transition: margin-left 0.3s ease;
+}
+
+.content-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-6);
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout.sidebar-open .main-container {
+    /* When sidebar is open on mobile, it overlaps, no margin change needed */
+  }
+  
+  .content-area {
+    padding: var(--spacing-4);
+  }
+}

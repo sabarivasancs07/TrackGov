@@ -1,0 +1,27 @@
+[
+    {
+        "stage_name": "Application Submitted",
+        "expected_processing_days": 2,
+        "delay_reason": "The application has remained in the submission stage longer than the expected processing period."
+    },
+    {
+        "stage_name": "Document Verification",
+        "expected_processing_days": 7,
+        "delay_reason": "Document verification may take additional time when submitted documents require detailed verification."
+    },
+    {
+        "stage_name": "Officer Verification",
+        "expected_processing_days": 5,
+        "delay_reason": "Officer verification is taking longer than the expected processing period."
+    },
+    {
+        "stage_name": "Field Verification",
+        "expected_processing_days": 10,
+        "delay_reason": "Field verification may require additional time because verification activities have to be completed before the application can proceed."
+    },
+    {
+        "stage_name": "Final Approval",
+        "expected_processing_days": 3,
+        "delay_reason": "The application is taking longer than expected at the final approval stage."
+    }
+] 

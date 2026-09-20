@@ -1,0 +1,93 @@
+[
+    {
+        "application_id": "INC-2026-001",
+        "applicant_name": "Arun Kumar",
+        "mobile_number": "9876543210",
+        "application_type": "Income Certificate",
+        "status": "Under Verification",
+        "current_stage": "Document Verification",
+        "submitted_date": "2026-08-10",
+        "last_updated": "2026-08-18",
+        "assigned_officer_id": "OFF-001",
+        "remarks": "Documents are currently under verification.",
+        "required_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "completed_documents": [
+            "Aadhaar Card",
+            "Address Proof"
+        ],
+        "estimated_completion_date": "2026-08-25"
+    },
+    {
+        "application_id": "INC-2026-002",
+        "applicant_name": "Priya Sharma",
+        "mobile_number": "9123456789",
+        "application_type": "Income Certificate",
+        "status": "Submitted",
+        "current_stage": "Application Submitted",
+        "submitted_date": "2026-08-16",
+        "last_updated": "2026-08-16",
+        "assigned_officer_id": null,
+        "remarks": "Application submitted successfully and waiting for processing.",
+        "required_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "completed_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "estimated_completion_date": "2026-08-30"
+    },
+    {
+        "application_id": "INC-2026-003",
+        "applicant_name": "Rahul Raj",
+        "mobile_number": "9988776655",
+        "application_type": "Income Certificate",
+        "status": "Under Verification",
+        "current_stage": "Field Verification",
+        "submitted_date": "2026-08-01",
+        "last_updated": "2026-08-12",
+        "assigned_officer_id": "OFF-002",
+        "remarks": "Field verification is currently in progress.",
+        "required_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "completed_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "estimated_completion_date": "2026-08-20"
+    },
+    {
+        "application_id": "INC-2026-004",
+        "applicant_name": "Meena Devi",
+        "mobile_number": "8765432109",
+        "application_type": "Income Certificate",
+        "status": "Approved",
+        "current_stage": "Final Approval",
+        "submitted_date": "2026-07-28",
+        "last_updated": "2026-08-15",
+        "assigned_officer_id": "OFF-003",
+        "remarks": "Application approved successfully.",
+        "required_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "completed_documents": [
+            "Aadhaar Card",
+            "Income Proof",
+            "Address Proof"
+        ],
+        "estimated_completion_date": "2026-08-15"
+    }
+]    
