@@ -10,7 +10,7 @@ from app.utils.prompt_builder import (
 )
 
 
-MODEL_NAME = "gemini-3.6-flash"
+MODEL_NAME = "gemini-3.7-flash"
 
 
 def generate_application_status_explanation(
