@@ -1,4 +1,5 @@
 from typing import Any
+import time
 
 from google.genai import types
 from google.genai.errors import ServerError
@@ -12,6 +13,55 @@ from app.utils.prompt_builder import (
 
 MODEL_NAME = "gemini-3.7-flash"
 
+MAX_RETRIES = 3
+RETRY_DELAYS = [2, 5, 10]
+
+
+def _generate_content(prompt: str) -> str:
+    """
+    Generate Gemini content with automatic retry
+    for temporary server errors such as HTTP 503.
+    """
+
+    client = get_gemini_client()
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = client.models.generate_content(
+                model=MODEL_NAME,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    temperature=0.3,
+                ),
+            )
+
+            if response.text:
+                return response.text
+
+            print("Gemini returned an empty response.")
+            return ""
+
+        except ServerError as e:
+            print(
+                f"Gemini Server Error "
+                f"(attempt {attempt + 1}/{MAX_RETRIES}): "
+                f"{type(e).__name__}: {e}"
+            )
+
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(RETRY_DELAYS[attempt])
+            else:
+                raise
+
+        except Exception as e:
+            print(
+                f"Gemini API Error: "
+                f"{type(e).__name__}: {e}"
+            )
+            raise
+
+    return ""
+
 
 def generate_application_status_explanation(
     application: dict[str, Any],
@@ -22,42 +72,25 @@ def generate_application_status_explanation(
     """
 
     try:
-        client = get_gemini_client()
-
         prompt = build_application_status_prompt(application)
 
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.3,
-            ),
-        )
+        result = _generate_content(prompt)
 
-        if response.text:
-            return response.text
-
-        print("Gemini API returned an empty response.")
+        if result:
+            return result
 
         return (
             "Unable to generate an AI explanation "
             "at the moment."
         )
 
-    except ServerError as e:
-        print(
-            f"Gemini Server Error: "
-            f"{type(e).__name__}: {e}"
-        )
-
+    except ServerError:
         return (
             "The AI explanation service is temporarily "
-            "unavailable. Please try again shortly."
+            "busy. Please try again shortly."
         )
 
-    except Exception as e:
-        print(f"Gemini API Error: {type(e).__name__}: {e}")
-
+    except Exception:
         return (
             "Unable to generate an AI explanation "
             "at the moment."
@@ -74,48 +107,28 @@ def generate_delay_explanation(
     """
 
     try:
-        client = get_gemini_client()
-
         prompt = build_delay_explanation_prompt(
             application,
             delay_info,
         )
 
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                temperature=0.3,
-            ),
-        )
+        result = _generate_content(prompt)
 
-        if response.text:
-            return response.text
-
-        print("Gemini API returned an empty delay response.")
+        if result:
+            return result
 
         return (
             "Unable to generate an AI delay explanation "
             "at the moment."
         )
 
-    except ServerError as e:
-        print(
-            f"Gemini Delay Server Error: "
-            f"{type(e).__name__}: {e}"
-        )
-
+    except ServerError:
         return (
             "The AI delay explanation service is temporarily "
-            "unavailable. Please try again shortly."
+            "busy. Please try again shortly."
         )
 
-    except Exception as e:
-        print(
-            f"Gemini Delay API Error: "
-            f"{type(e).__name__}: {e}"
-        )
-
+    except Exception:
         return (
             "Unable to generate an AI delay explanation "
             "at the moment."
