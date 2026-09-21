@@ -14,7 +14,7 @@ MODEL_NAME = "gemini-3.6-flash"
 
 
 def generate_application_status_explanation(
-    application: dict[str, Any]
+    application: dict[str, Any],
 ) -> str:
     """
     Generates a simple, citizen-friendly explanation
@@ -22,37 +22,41 @@ def generate_application_status_explanation(
     """
 
     try:
-
         client = get_gemini_client()
 
-        prompt = build_application_status_prompt(
-            application
-        )
+        prompt = build_application_status_prompt(application)
 
         response = client.models.generate_content(
             model=MODEL_NAME,
             contents=prompt,
             config=types.GenerateContentConfig(
-                temperature=0.3
-            )
+                temperature=0.3,
+            ),
         )
 
         if response.text:
             return response.text
+
+        print("Gemini API returned an empty response.")
 
         return (
             "Unable to generate an AI explanation "
             "at the moment."
         )
 
-    except ServerError:
+    except ServerError as e:
+        print(
+            f"Gemini Server Error: "
+            f"{type(e).__name__}: {e}"
+        )
 
         return (
             "The AI explanation service is temporarily "
             "unavailable. Please try again shortly."
         )
 
-    except Exception:
+    except Exception as e:
+        print(f"Gemini API Error: {type(e).__name__}: {e}")
 
         return (
             "Unable to generate an AI explanation "
@@ -62,7 +66,7 @@ def generate_application_status_explanation(
 
 def generate_delay_explanation(
     application: dict[str, Any],
-    delay_info: dict[str, Any]
+    delay_info: dict[str, Any],
 ) -> str:
     """
     Generates a citizen-friendly explanation
@@ -70,38 +74,47 @@ def generate_delay_explanation(
     """
 
     try:
-
         client = get_gemini_client()
 
         prompt = build_delay_explanation_prompt(
             application,
-            delay_info
+            delay_info,
         )
 
         response = client.models.generate_content(
             model=MODEL_NAME,
             contents=prompt,
             config=types.GenerateContentConfig(
-                temperature=0.3
-            )
+                temperature=0.3,
+            ),
         )
 
         if response.text:
             return response.text
+
+        print("Gemini API returned an empty delay response.")
 
         return (
             "Unable to generate an AI delay explanation "
             "at the moment."
         )
 
-    except ServerError:
+    except ServerError as e:
+        print(
+            f"Gemini Delay Server Error: "
+            f"{type(e).__name__}: {e}"
+        )
 
         return (
             "The AI delay explanation service is temporarily "
             "unavailable. Please try again shortly."
         )
 
-    except Exception:
+    except Exception as e:
+        print(
+            f"Gemini Delay API Error: "
+            f"{type(e).__name__}: {e}"
+        )
 
         return (
             "Unable to generate an AI delay explanation "
